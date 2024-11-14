@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional de Philipp Lahm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagina1.html">Biografía</a></li>
+            <li><a href="pagina2.html">Galería</a></li>
+            <li><a href="pagina3.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <h1>Perfil Profesional de Philipp Lahm</h1>
+        <p>Explora las diferentes secciones para conocer más sobre la carrera, momentos destacados, pensamientos y
+            proyectos de Philipp Lahm.</p>
+
+        <!-- Cuadro que cambia de tamaño al pasar el cursor -->
+        <div class="hover-box">
+            <p>Pasa el cursor sobre este cuadro y toca el botón cambiante</p>
+        </div>
+
+        <!-- Botones Animados -->
+        <div class="buttons">
+            <a href="index.html" class="btn anim-click" id="colorSizeBtn">Botón cambiante</a>
+            <a href="index.html" class="btn anim1">Inicio</a>
+            <a href="pagina1.html" class="btn anim2">Biografía</a>
+            <a href="pagina2.html" class="btn anim3">Galería</a>
+            <a href="pagina3.html" class="btn anim4">Blog</a>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; Esteban Peralta - <span id="fecha"></span></p>
+    </footer>
+
+    <script>
+        // Actualiza la fecha automáticamente
+        const fechaActual = new Date();
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+        document.getElementById('fecha').textContent = fechaFormateada;
+
+        // Cambiar tamaño y color del botón al hacer clic
+        document.getElementById('colorSizeBtn').addEventListener('click', function () {
+            this.classList.toggle('clicked');
+        });
+    </script>
+</body>
+
+</html>
